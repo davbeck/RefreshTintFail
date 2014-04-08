@@ -1,4 +1,4 @@
-# UIRefreshControl tintColor is not applied on initial refresh
+# [UIRefreshControl tintColor is not applied on initial refresh (rdar://16559598)](rdar://16559598)
 
 ## Description
 
