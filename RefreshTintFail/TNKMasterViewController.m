@@ -19,10 +19,18 @@
 {
     [super viewDidLoad];
     
+    // if you comment out this line, the initial tintColor will still be black, not blue
     self.refreshControl.tintColor = [UIColor whiteColor];
-    [self refresh:self.refreshControl];
     
+    // the refresh control will be black
+    [self refresh:self.refreshControl];
     self.tableView.contentOffset = CGPointMake(0.0, -self.tableView.contentInset.top);
+
+    // if you use the following instead, it will be white
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self refresh:self.refreshControl];
+//        self.tableView.contentOffset = CGPointMake(0.0, -self.tableView.contentInset.top);
+//    });
 }
 
 - (IBAction)refresh:(id)sender
